@@ -1845,6 +1845,7 @@ img,
 .video-container,
 .ss-custom-select {
     margin-bottom : var(--vspace-1);
+    /* filter: blur(1px); */
 }
 
 
@@ -3238,7 +3239,11 @@ img.u-pull-left {
 }
 
 .s-intro__text h3 span {
-    color : var(--color-2-light);
+    /* color : var(--color-2-light); */
+    color            : white;
+    font-family: var(--font-2);
+    text-shadow: 0px 1px 0px rgb(0 0 0 / 10%);
+
 }
 
 .s-intro__text-huge {
@@ -3247,7 +3252,7 @@ img.u-pull-left {
     line-height      : 1;
     letter-spacing   : -0.015em;
     margin-top       : calc(var(--text-huge-size) / 2 * -1.2);
-    margin-bottom    : var(--vspace-1_25);
+    /* margin-bottom    : var(--vspace-1_25); */
     color            : white;
     text-shadow: 0px 1px 0px rgb(0 0 0 / 10%);
 }
@@ -3286,7 +3291,13 @@ img.u-pull-left {
  * responsive:
  * intro
  * ------------------------------------------------------------------- */
-@media screen and (max-width: 1400px) {
+ @media screen and (max-width: 4000px) {
+    .s-intro__text-huge {
+        --text-huge-size : 120px;
+    }
+}
+
+ @media screen and (max-width: 1400px) {
     .s-intro__text-huge {
         --text-huge-size : 8vw;
     }
